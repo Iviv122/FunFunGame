@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://b74ju3rtwb8k4"]
+
+[ext_resource type="Texture2D" uid="uid://bncgydei0a7nu" path="res://icon.svg" id="1_5hfv0"]
+[ext_resource type="Script" uid="uid://drb3ehbb4sd7q" path="res://objects/line.gd" id="1_c6xj6"]
+[ext_resource type="Script" uid="uid://cdbs17po5dtub" path="res://objects/ball.gd" id="1_m0rpm"]
+[ext_resource type="Shape2D" uid="uid://b1if52kj15414" path="res://resources/line.tres" id="2_6bw2v"]
+[ext_resource type="Script" uid="uid://dwcu3ihj2el7k" path="res://objects/start.gd" id="3_c6xj6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0bhed"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("1_c6xj6")
+L = ExtResource("2_6bw2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = ExtResource("2_6bw2v")
+
+[node name="Line2D" type="Line2D" parent="StaticBody2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." node_paths=PackedStringArray("s")]
+position = Vector2(152, 0)
+script = ExtResource("1_m0rpm")
+s = NodePath("../CanvasLayer/Button")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_0bhed")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_5hfv0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+offset_right = 68.5625
+offset_bottom = 31.0
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 83.0
+offset_right = 91.0
+offset_bottom = 8.0
+text = "Start"
+script = ExtResource("3_c6xj6")
