@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnx1ubaw4ubfp"]
+
+[ext_resource type="Script" uid="uid://cxg6kba4y0qgk" path="res://effect.gd" id="1_vdn6p"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vdn6p"]
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 720.0
+spread = 180.0
+initial_velocity_max = 448.28
+gravity = Vector3(0, 98, 0)
+
+[node name="Node2D" type="GPUParticles2D"]
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_vdn6p")
+script = ExtResource("1_vdn6p")

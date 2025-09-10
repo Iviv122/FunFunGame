@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b74ju3rtwb8k4"]
+[gd_scene load_steps=14 format=3 uid="uid://b74ju3rtwb8k4"]
 
 [ext_resource type="Script" uid="uid://drb3ehbb4sd7q" path="res://objects/line.gd" id="1_c6xj6"]
 [ext_resource type="Script" uid="uid://cdbs17po5dtub" path="res://objects/ball.gd" id="1_m0rpm"]
 [ext_resource type="Script" uid="uid://dwcu3ihj2el7k" path="res://objects/start.gd" id="3_c6xj6"]
 [ext_resource type="Script" uid="uid://w6l6fb4dg36k" path="res://objects/reset.gd" id="4_c6xj6"]
 [ext_resource type="Script" uid="uid://1xn64xlrj0sc" path="res://objects/Exit.gd" id="5_6bw2v"]
+[ext_resource type="PackedScene" uid="uid://bnx1ubaw4ubfp" path="res://resources/wineffect.tscn" id="6_kem5a"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m0rpm"]
 
@@ -93,6 +94,7 @@ metadata/_custom_type_script = "uid://w6l6fb4dg36k"
 [node name="Exit" type="Area2D" parent="."]
 position = Vector2(192, 112)
 script = ExtResource("5_6bw2v")
+WinEffect = ExtResource("6_kem5a")
 metadata/_custom_type_script = "uid://1xn64xlrj0sc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
