@@ -1,5 +1,5 @@
 extends Button
-class_name Starter
+class_name Start 
 
 signal start 
 
