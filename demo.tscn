@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://w6l6fb4dg36k" path="res://objects/reset.gd" id="4_c6xj6"]
 [ext_resource type="Script" uid="uid://1xn64xlrj0sc" path="res://objects/Exit.gd" id="5_6bw2v"]
 [ext_resource type="PackedScene" uid="uid://bnx1ubaw4ubfp" path="res://resources/wineffect.tscn" id="6_kem5a"]
-[ext_resource type="Shader" uid="uid://ba2e536dkgj1o" path="res://shaders/confetti.gdshader" id="7_gxmxl"]
+[ext_resource type="Shader" uid="uid://ba2e536dkgj1o" path="res://shaders/portal.gdshader" id="7_gxmxl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m0rpm"]
 
@@ -113,5 +113,4 @@ shape = SubResource("RectangleShape2D_c6xj6")
 texture_filter = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_gxmxl")
-scale = Vector2(1, 1)
 texture = SubResource("GradientTexture2D_n4w22")
