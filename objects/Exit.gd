@@ -7,7 +7,8 @@ func _ready():
 	body_entered.connect(win)
 
 func win(_a):
-	print("win")
-	var effect : GPUParticles2D= WinEffect.instantiate()
-	effect.restart() 
-	add_child(effect)
+	if _a is Ball:
+		print("win")
+		var effect : GPUParticles2D= WinEffect.instantiate()
+		effect.restart() 
+		add_child(effect)
