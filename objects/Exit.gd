@@ -8,4 +8,6 @@ func _ready():
 
 func win(_a):
 	print("win")
-	add_child(WinEffect.instantiate())
+	var effect : GPUParticles2D= WinEffect.instantiate()
+	effect.restart() 
+	add_child(effect)
