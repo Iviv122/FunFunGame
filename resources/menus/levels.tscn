@@ -1,0 +1,102 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6hq44mkmdh3e"]
+
+[ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="1_63hvg"]
+[ext_resource type="Script" uid="uid://d1n17drxsm2k6" path="res://objects/main_menu/exit.gd" id="1_srrjw"]
+
+[node name="Container" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.5
+offset_top = 15.0
+offset_right = -7.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 2
+text = "Back"
+script = ExtResource("1_63hvg")
+scene = "res://resources/menus/main_menu.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 8
+
+[node name="1" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "1"
+script = ExtResource("1_63hvg")
+scene = "res://resources/levels/1.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
+
+[node name="2" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "2"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+
+[node name="3" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "3"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+
+[node name="4" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "4"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+
+[node name="5" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "5"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+
+[node name="6" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "6"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+
+[node name="7" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "7"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+
+[node name="8" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "8"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+
+[node name="9" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "9"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+
+[node name="10" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "10"
+script = ExtResource("1_srrjw")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"

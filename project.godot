@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FunFun"
-run/main_scene="uid://b74ju3rtwb8k4"
+run/main_scene="uid://c2afny00a51rr"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=600
 window/size/viewport_height=600
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[global_group]
+
+scene_manager="LoadScene"
 
 [rendering]
 

@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjjec76hb1xoj"]
+
+[ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="1_sy3tx"]
+[ext_resource type="Script" uid="uid://d1n17drxsm2k6" path="res://objects/main_menu/exit.gd" id="3_dw1g1"]
+
+[node name="Container" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 2
+text = "Play"
+script = ExtResource("1_sy3tx")
+scene = "res://resources/menus/levels.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 2
+text = "Settings"
+script = ExtResource("1_sy3tx")
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 2
+text = "Exit"
+script = ExtResource("3_dw1g1")
+metadata/_custom_type_script = "uid://d1n17drxsm2k6"
