@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dlfn60nflwkth"]
+[gd_scene load_steps=19 format=3 uid="uid://dlfn60nflwkth"]
 
 [ext_resource type="Script" uid="uid://drb3ehbb4sd7q" path="res://objects/gameplay/line.gd" id="1_1t7od"]
 [ext_resource type="Script" uid="uid://mplvrkjmevfc" path="res://objects/gameplay/ball_spawn.gd" id="2_sws88"]
@@ -12,6 +12,18 @@
 [ext_resource type="PackedScene" uid="uid://b42lkvj3x32tk" path="res://resources/effects/confetti_particles.tscn" id="10_8srmp"]
 [ext_resource type="Shader" uid="uid://ba2e536dkgj1o" path="res://shaders/portal.gdshader" id="11_onvoy"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sws88"]
+size = Vector2(150, 150)
+
+[sub_resource type="Gradient" id="Gradient_ghlys"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wfq12"]
+gradient = SubResource("Gradient_ghlys")
+width = 150
+height = 150
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t7od"]
 size = Vector2(65, 65)
 
@@ -23,12 +35,12 @@ shader_parameter/speed = 1.24
 shader_parameter/fade = 0.1
 shader_parameter/thickness = 0.14
 
-[sub_resource type="Gradient" id="Gradient_gui38"]
+[sub_resource type="Gradient" id="Gradient_1t7od"]
 offsets = PackedFloat32Array(1)
 colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_x2w8b"]
-gradient = SubResource("Gradient_gui38")
+gradient = SubResource("Gradient_1t7od")
 
 [node name="Node2D" type="Node2D"]
 
@@ -42,6 +54,7 @@ metadata/_custom_type_script = "uid://drb3ehbb4sd7q"
 [node name="StaticBody2D" type="StaticBody2D" parent="Line2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/StaticBody2D"]
+position = Vector2(-72, 0)
 
 [node name="BallSpawn" type="Node2D" parent="."]
 position = Vector2(0, -100)
@@ -108,13 +121,38 @@ metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(177, -63)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_sws88")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+texture = SubResource("GradientTexture2D_wfq12")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(177, 87)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_sws88")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+texture = SubResource("GradientTexture2D_wfq12")
+
+[node name="Wind3" parent="." instance=ExtResource("8_ew08o")]
+position = Vector2(274, 63)
+
+[node name="Wind2" parent="." instance=ExtResource("8_ew08o")]
+position = Vector2(278, 266)
+
 [node name="Wind" parent="." instance=ExtResource("8_ew08o")]
+position = Vector2(75, 310)
 
 [node name="Exit" type="Area2D" parent="."]
-position = Vector2(229, -152)
+position = Vector2(257, -181)
 script = ExtResource("9_0idtg")
 WinEffect = ExtResource("10_8srmp")
-NextLevel = "res://resources/levels/6.tscn"
+NextLevel = "res://resources/levels/8.tscn"
 metadata/_custom_type_script = "uid://1xn64xlrj0sc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]

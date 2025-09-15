@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b42lkvj3x32tk"]
 
-[ext_resource type="Texture2D" uid="uid://bkwsekpitin8d" path="res://raw_assets/Confetti.png" id="1_op0tt"]
+[ext_resource type="Texture2D" uid="uid://bkwsekpitin8d" path="res://raw_assets/sprites/Confetti.png" id="1_op0tt"]
 [ext_resource type="Script" uid="uid://n31rrmw3vapj" path="res://objects/gameplay/self_kill.gd" id="2_5kp53"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_op0tt"]

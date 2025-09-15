@@ -30,6 +30,7 @@ scene_manager="LoadScene"
 restart_group=""
 start_group=""
 end_group=""
+music=""
 
 [rendering]
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c653p1pgx8ia8"]
+[gd_scene load_steps=3 format=3 uid="uid://c653p1pgx8ia8"]
 
 [ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="1_0sh6h"]
+[ext_resource type="Script" uid="uid://n4c3fc66vwup" path="res://objects/settings/volume_slider.gd" id="2_0sh6h"]
 
 [node name="Container" type="VBoxContainer"]
 anchors_preset = 15
@@ -27,6 +28,8 @@ text = "Music Volume"
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer"]
 layout_mode = 2
+script = ExtResource("2_0sh6h")
+metadata/_custom_type_script = "uid://n4c3fc66vwup"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2

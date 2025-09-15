@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://de07iu5m61dsy"]
+[gd_scene load_steps=16 format=3 uid="uid://de07iu5m61dsy"]
 
 [ext_resource type="Script" uid="uid://drb3ehbb4sd7q" path="res://objects/gameplay/line.gd" id="1_yucvn"]
 [ext_resource type="Script" uid="uid://mplvrkjmevfc" path="res://objects/gameplay/ball_spawn.gd" id="2_ywd1n"]
@@ -8,6 +8,27 @@
 [ext_resource type="Script" uid="uid://w6l6fb4dg36k" path="res://objects/gameplay/reset.gd" id="6_02qxt"]
 [ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="7_87eua"]
 [ext_resource type="PackedScene" uid="uid://ckqjrcvst2qd1" path="res://resources/effects/wind.tscn" id="8_kxyns"]
+[ext_resource type="Script" uid="uid://1xn64xlrj0sc" path="res://objects/gameplay/exit.gd" id="9_yucvn"]
+[ext_resource type="PackedScene" uid="uid://b42lkvj3x32tk" path="res://resources/effects/confetti_particles.tscn" id="10_ywd1n"]
+[ext_resource type="Shader" uid="uid://ba2e536dkgj1o" path="res://shaders/portal.gdshader" id="11_fu4jl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmi1j"]
+size = Vector2(65, 65)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xp785"]
+shader = ExtResource("11_fu4jl")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/rays = 4.0
+shader_parameter/speed = 1.24
+shader_parameter/fade = 0.1
+shader_parameter/thickness = 0.14
+
+[sub_resource type="Gradient" id="Gradient_gui38"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_02qxt"]
+gradient = SubResource("Gradient_gui38")
 
 [node name="Node2D" type="Node2D"]
 
@@ -88,3 +109,20 @@ metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Wind" parent="." instance=ExtResource("8_kxyns")]
+position = Vector2(0, 199)
+
+[node name="Exit" type="Area2D" parent="Wind"]
+position = Vector2(181, -373)
+script = ExtResource("9_yucvn")
+WinEffect = ExtResource("10_ywd1n")
+NextLevel = "res://resources/levels/6.tscn"
+metadata/_custom_type_script = "uid://1xn64xlrj0sc"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wind/Exit"]
+shape = SubResource("RectangleShape2D_jmi1j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wind/Exit"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_xp785")
+texture = SubResource("GradientTexture2D_02qxt")

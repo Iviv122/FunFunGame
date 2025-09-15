@@ -32,12 +32,12 @@ gradient = SubResource("Gradient_gxmxl")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghlys"]
 size = Vector2(150, 150)
 
-[sub_resource type="Gradient" id="Gradient_ghlys"]
+[sub_resource type="Gradient" id="Gradient_vj7gb"]
 offsets = PackedFloat32Array(1)
 colors = PackedColorArray(1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_1r40a"]
-gradient = SubResource("Gradient_ghlys")
+gradient = SubResource("Gradient_vj7gb")
 width = 150
 height = 150
 
@@ -120,7 +120,7 @@ metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Exit" type="Area2D" parent="."]
-position = Vector2(-70, 146)
+position = Vector2(-70, 145)
 script = ExtResource("9_byqmk")
 WinEffect = ExtResource("10_8eqjd")
 NextLevel = "res://resources/levels/7.tscn"

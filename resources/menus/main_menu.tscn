@@ -27,6 +27,7 @@ metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 layout_mode = 2
 text = "Settings"
 script = ExtResource("1_sy3tx")
+scene = "res://resources/menus/settings.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="Exit" type="Button" parent="."]

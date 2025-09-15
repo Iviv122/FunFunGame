@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkwsekpitin8d"
-path="res://.godot/imported/Confetti.png-0d00ba372c651162b962912ccb445afa.ctex"
+path="res://.godot/imported/Confetti.png-d5e19289639a94fcc1ad06fe10ce91be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://raw_assets/Confetti.png"
-dest_files=["res://.godot/imported/Confetti.png-0d00ba372c651162b962912ccb445afa.ctex"]
+source_file="res://raw_assets/sprites/Confetti.png"
+dest_files=["res://.godot/imported/Confetti.png-d5e19289639a94fcc1ad06fe10ce91be.ctex"]
 
 [params]
 
