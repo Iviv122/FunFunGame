@@ -10,8 +10,8 @@ colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_jix8l"]
 gradient = SubResource("Gradient_fu7sn")
-width = 600
-height = 600
+width = 2400
+height = 2400
 
 [node name="Node2D" type="Node2D"]
 
@@ -24,7 +24,6 @@ metadata/_custom_type_script = "uid://bldimd5fjmpkc"
 [node name="Fadeout" type="Sprite2D" parent="Manager"]
 z_index = 1
 texture = SubResource("GradientTexture2D_jix8l")
-centered = false
 script = ExtResource("1_7vrkn")
 metadata/_custom_type_script = "uid://qnqyv6v2in4x"
 

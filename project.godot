@@ -27,6 +27,9 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 [global_group]
 
 scene_manager="LoadScene"
+restart_group=""
+start_group=""
+end_group=""
 
 [rendering]
 
