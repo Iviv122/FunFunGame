@@ -21,3 +21,4 @@ func loadMenu(scene: String) -> void:
 	var s : PackedScene = load(scene)
 	add_child(s.instantiate())
 	fade.fadeout()
+	get_tree().call_group("restart_group","restart")

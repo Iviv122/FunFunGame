@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://de07iu5m61dsy"]
+
+[ext_resource type="Script" uid="uid://drb3ehbb4sd7q" path="res://objects/gameplay/line.gd" id="1_yucvn"]
+[ext_resource type="Script" uid="uid://mplvrkjmevfc" path="res://objects/gameplay/ball_spawn.gd" id="2_ywd1n"]
+[ext_resource type="PackedScene" uid="uid://bv681ae8ocl27" path="res://resources/objects/ball.tscn" id="3_fu4jl"]
+[ext_resource type="Script" uid="uid://cryyglkag2xcl" path="res://objects/gameplay/ui_fade.gd" id="4_jmi1j"]
+[ext_resource type="Script" uid="uid://dwcu3ihj2el7k" path="res://objects/gameplay/start.gd" id="5_xp785"]
+[ext_resource type="Script" uid="uid://w6l6fb4dg36k" path="res://objects/gameplay/reset.gd" id="6_02qxt"]
+[ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="7_87eua"]
+[ext_resource type="PackedScene" uid="uid://ckqjrcvst2qd1" path="res://resources/effects/wind.tscn" id="8_kxyns"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="." node_paths=PackedStringArray("line", "s")]
+width = 5.0
+script = ExtResource("1_yucvn")
+line = NodePath("../CanvasLayer/Control/LineEdit")
+s = NodePath("StaticBody2D")
+metadata/_custom_type_script = "uid://drb3ehbb4sd7q"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Line2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/StaticBody2D"]
+
+[node name="BallSpawn" type="Node2D" parent="."]
+position = Vector2(0, -100)
+script = ExtResource("2_ywd1n")
+ex = ExtResource("3_fu4jl")
+metadata/_custom_type_script = "uid://mplvrkjmevfc"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(-300, -300)
+transform = Transform2D(1, 0, 0, 1, -300, -300)
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+physics_interpolation_mode = 0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_jmi1j")
+metadata/_custom_type_script = "uid://cryyglkag2xcl"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 510.0
+offset_bottom = 70.0
+placeholder_text = "x*x"
+
+[node name="Start" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 90.0
+offset_right = 56.0
+offset_bottom = 121.0
+text = "Start"
+script = ExtResource("5_xp785")
+metadata/_custom_type_script = "uid://dwcu3ihj2el7k"
+
+[node name="Reset" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 90.0
+offset_right = 131.0
+offset_bottom = 121.0
+text = "Reset"
+script = ExtResource("6_02qxt")
+metadata/_custom_type_script = "uid://w6l6fb4dg36k"
+
+[node name="Back" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -51.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Back"
+script = ExtResource("7_87eua")
+scene = "res://resources/menus/main_menu.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Wind" parent="." instance=ExtResource("8_kxyns")]

@@ -1,0 +1,154 @@
+[gd_scene load_steps=18 format=3 uid="uid://dq8t723f4e333"]
+
+[ext_resource type="Script" uid="uid://drb3ehbb4sd7q" path="res://objects/gameplay/line.gd" id="1_s7gtd"]
+[ext_resource type="Script" uid="uid://mplvrkjmevfc" path="res://objects/gameplay/ball_spawn.gd" id="2_soir0"]
+[ext_resource type="PackedScene" uid="uid://bv681ae8ocl27" path="res://resources/objects/ball.tscn" id="3_o3l38"]
+[ext_resource type="Script" uid="uid://cryyglkag2xcl" path="res://objects/gameplay/ui_fade.gd" id="4_rsryj"]
+[ext_resource type="Script" uid="uid://dwcu3ihj2el7k" path="res://objects/gameplay/start.gd" id="5_u1k8m"]
+[ext_resource type="Script" uid="uid://w6l6fb4dg36k" path="res://objects/gameplay/reset.gd" id="6_7rnbr"]
+[ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="7_c0i05"]
+[ext_resource type="Script" uid="uid://1xn64xlrj0sc" path="res://objects/gameplay/exit.gd" id="9_byqmk"]
+[ext_resource type="PackedScene" uid="uid://b42lkvj3x32tk" path="res://resources/effects/confetti_particles.tscn" id="10_8eqjd"]
+[ext_resource type="Shader" uid="uid://ba2e536dkgj1o" path="res://shaders/portal.gdshader" id="11_wgeyw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vj7gb"]
+size = Vector2(65, 65)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s7gtd"]
+shader = ExtResource("11_wgeyw")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/rays = 4.0
+shader_parameter/speed = 1.24
+shader_parameter/fade = 0.1
+shader_parameter/thickness = 0.14
+
+[sub_resource type="Gradient" id="Gradient_gxmxl"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_soir0"]
+gradient = SubResource("Gradient_gxmxl")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghlys"]
+size = Vector2(150, 150)
+
+[sub_resource type="Gradient" id="Gradient_ghlys"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1r40a"]
+gradient = SubResource("Gradient_ghlys")
+width = 150
+height = 150
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="." node_paths=PackedStringArray("line", "s")]
+width = 5.0
+script = ExtResource("1_s7gtd")
+line = NodePath("../CanvasLayer/Control/LineEdit")
+s = NodePath("StaticBody2D")
+metadata/_custom_type_script = "uid://drb3ehbb4sd7q"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Line2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/StaticBody2D"]
+
+[node name="BallSpawn" type="Node2D" parent="."]
+position = Vector2(238, -153)
+script = ExtResource("2_soir0")
+ex = ExtResource("3_o3l38")
+metadata/_custom_type_script = "uid://mplvrkjmevfc"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(-300, -300)
+transform = Transform2D(1, 0, 0, 1, -300, -300)
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+physics_interpolation_mode = 0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_rsryj")
+metadata/_custom_type_script = "uid://cryyglkag2xcl"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 510.0
+offset_bottom = 70.0
+placeholder_text = "x*x"
+
+[node name="Start" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 90.0
+offset_right = 56.0
+offset_bottom = 121.0
+text = "Start"
+script = ExtResource("5_u1k8m")
+metadata/_custom_type_script = "uid://dwcu3ihj2el7k"
+
+[node name="Reset" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 90.0
+offset_right = 131.0
+offset_bottom = 121.0
+text = "Reset"
+script = ExtResource("6_7rnbr")
+metadata/_custom_type_script = "uid://w6l6fb4dg36k"
+
+[node name="Back" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -51.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Back"
+script = ExtResource("7_c0i05")
+scene = "res://resources/menus/main_menu.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(-70, 146)
+script = ExtResource("9_byqmk")
+WinEffect = ExtResource("10_8eqjd")
+NextLevel = "res://resources/levels/7.tscn"
+metadata/_custom_type_script = "uid://1xn64xlrj0sc"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+shape = SubResource("RectangleShape2D_vj7gb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_s7gtd")
+texture = SubResource("GradientTexture2D_soir0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(76, 119)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_ghlys")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+texture = SubResource("GradientTexture2D_1r40a")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(84, -123)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_ghlys")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = SubResource("GradientTexture2D_1r40a")

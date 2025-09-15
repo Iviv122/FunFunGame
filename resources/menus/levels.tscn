@@ -56,39 +56,39 @@ metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 [node name="4" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "1"
+text = "4"
 script = ExtResource("1_63hvg")
-scene = "res://resources/levels/1.tscn"
+scene = "res://resources/levels/4.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="5" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "1"
+text = "5"
 script = ExtResource("1_63hvg")
-scene = "res://resources/levels/1.tscn"
+scene = "res://resources/levels/5.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="6" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "1"
+text = "6"
 script = ExtResource("1_63hvg")
-scene = "res://resources/levels/1.tscn"
+scene = "res://resources/levels/6.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="7" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "1"
+text = "7"
 script = ExtResource("1_63hvg")
-scene = "res://resources/levels/1.tscn"
+scene = "res://resources/levels/7.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="8" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "1"
+text = "8"
 script = ExtResource("1_63hvg")
-scene = "res://resources/levels/1.tscn"
+scene = "res://resources/levels/8.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
