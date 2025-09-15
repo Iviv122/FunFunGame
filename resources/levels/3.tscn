@@ -1,21 +1,22 @@
-[gd_scene load_steps=15 format=3 uid="uid://b74ju3rtwb8k4"]
+[gd_scene load_steps=16 format=3 uid="uid://dvtcphnrprr4g"]
 
-[ext_resource type="Script" uid="uid://drb3ehbb4sd7q" path="res://objects/gameplay/line.gd" id="1_8spao"]
-[ext_resource type="Script" uid="uid://dwcu3ihj2el7k" path="res://objects/gameplay/start.gd" id="3_miq8h"]
-[ext_resource type="PackedScene" uid="uid://bv681ae8ocl27" path="res://resources/objects/ball.tscn" id="3_qvflm"]
-[ext_resource type="Script" uid="uid://mplvrkjmevfc" path="res://objects/gameplay/ball_spawn.gd" id="3_ua2mw"]
-[ext_resource type="Script" uid="uid://cryyglkag2xcl" path="res://objects/gameplay/ui_fade.gd" id="4_miq8h"]
-[ext_resource type="Script" uid="uid://w6l6fb4dg36k" path="res://objects/gameplay/reset.gd" id="4_qvflm"]
-[ext_resource type="Script" uid="uid://1xn64xlrj0sc" path="res://objects/gameplay/exit.gd" id="5_3hruu"]
-[ext_resource type="PackedScene" uid="uid://b42lkvj3x32tk" path="res://resources/effects/confetti_particles.tscn" id="6_oui4t"]
-[ext_resource type="Shader" uid="uid://ba2e536dkgj1o" path="res://shaders/portal.gdshader" id="7_ogo1j"]
-[ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="7_qvflm"]
+[ext_resource type="Script" uid="uid://drb3ehbb4sd7q" path="res://objects/gameplay/line.gd" id="1_j0cnj"]
+[ext_resource type="Script" uid="uid://mplvrkjmevfc" path="res://objects/gameplay/ball_spawn.gd" id="2_0kg0q"]
+[ext_resource type="PackedScene" uid="uid://bv681ae8ocl27" path="res://resources/objects/ball.tscn" id="3_eqh7i"]
+[ext_resource type="Script" uid="uid://cryyglkag2xcl" path="res://objects/gameplay/ui_fade.gd" id="4_i7mh5"]
+[ext_resource type="Script" uid="uid://dwcu3ihj2el7k" path="res://objects/gameplay/start.gd" id="5_k3kcd"]
+[ext_resource type="Script" uid="uid://w6l6fb4dg36k" path="res://objects/gameplay/reset.gd" id="6_f4nd6"]
+[ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="7_x1el6"]
+[ext_resource type="PackedScene" uid="uid://ckqjrcvst2qd1" path="res://resources/effects/wind.tscn" id="8_0kg0q"]
+[ext_resource type="Script" uid="uid://1xn64xlrj0sc" path="res://objects/gameplay/exit.gd" id="8_yv8yy"]
+[ext_resource type="PackedScene" uid="uid://b42lkvj3x32tk" path="res://resources/effects/confetti_particles.tscn" id="9_28ox3"]
+[ext_resource type="Shader" uid="uid://ba2e536dkgj1o" path="res://shaders/portal.gdshader" id="10_dojvx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6xj6"]
 size = Vector2(65, 65)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gxmxl"]
-shader = ExtResource("7_ogo1j")
+shader = ExtResource("10_dojvx")
 shader_parameter/color = Color(0, 0, 0, 1)
 shader_parameter/rays = 4.0
 shader_parameter/speed = 1.24
@@ -33,7 +34,7 @@ gradient = SubResource("Gradient_gxmxl")
 
 [node name="Line2D" type="Line2D" parent="." node_paths=PackedStringArray("line", "s")]
 width = 5.0
-script = ExtResource("1_8spao")
+script = ExtResource("1_j0cnj")
 line = NodePath("../CanvasLayer/Control/LineEdit")
 s = NodePath("StaticBody2D")
 metadata/_custom_type_script = "uid://drb3ehbb4sd7q"
@@ -44,8 +45,8 @@ metadata/_custom_type_script = "uid://drb3ehbb4sd7q"
 
 [node name="BallSpawn" type="Node2D" parent="."]
 position = Vector2(0, -100)
-script = ExtResource("3_ua2mw")
-ex = ExtResource("3_qvflm")
+script = ExtResource("2_0kg0q")
+ex = ExtResource("3_eqh7i")
 metadata/_custom_type_script = "uid://mplvrkjmevfc"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -61,7 +62,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("4_miq8h")
+script = ExtResource("4_i7mh5")
 metadata/_custom_type_script = "uid://cryyglkag2xcl"
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/Control"]
@@ -79,7 +80,7 @@ offset_top = 90.0
 offset_right = 56.0
 offset_bottom = 121.0
 text = "Start"
-script = ExtResource("3_miq8h")
+script = ExtResource("5_k3kcd")
 metadata/_custom_type_script = "uid://dwcu3ihj2el7k"
 
 [node name="Reset" type="Button" parent="CanvasLayer/Control"]
@@ -89,7 +90,7 @@ offset_top = 90.0
 offset_right = 131.0
 offset_bottom = 121.0
 text = "Reset"
-script = ExtResource("4_qvflm")
+script = ExtResource("6_f4nd6")
 metadata/_custom_type_script = "uid://w6l6fb4dg36k"
 
 [node name="Back" type="Button" parent="CanvasLayer/Control"]
@@ -101,17 +102,18 @@ offset_left = -51.0
 offset_bottom = 31.0
 grow_horizontal = 0
 text = "Back"
-script = ExtResource("7_qvflm")
+script = ExtResource("7_x1el6")
 scene = "res://resources/menus/main_menu.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="Wind" parent="." instance=ExtResource("8_0kg0q")]
+
 [node name="Exit" type="Area2D" parent="."]
-position = Vector2(192, 112)
-script = ExtResource("5_3hruu")
-WinEffect = ExtResource("6_oui4t")
-NextLevel = "res://resources/levels/2.tscn"
+position = Vector2(65, -161)
+script = ExtResource("8_yv8yy")
+WinEffect = ExtResource("9_28ox3")
 metadata/_custom_type_script = "uid://1xn64xlrj0sc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]

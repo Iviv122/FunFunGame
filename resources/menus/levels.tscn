@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6hq44mkmdh3e"]
+[gd_scene load_steps=2 format=3 uid="uid://b6hq44mkmdh3e"]
 
 [ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="1_63hvg"]
-[ext_resource type="Script" uid="uid://d1n17drxsm2k6" path="res://objects/main_menu/exit.gd" id="1_srrjw"]
 
 [node name="Container" type="VBoxContainer"]
 anchors_preset = 15
@@ -42,61 +41,54 @@ metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 text = "2"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+script = ExtResource("1_63hvg")
+scene = "res://resources/levels/2.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="3" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 text = "3"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+script = ExtResource("1_63hvg")
+scene = "res://resources/levels/3.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="4" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "4"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+text = "1"
+script = ExtResource("1_63hvg")
+scene = "res://resources/levels/1.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="5" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "5"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+text = "1"
+script = ExtResource("1_63hvg")
+scene = "res://resources/levels/1.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="6" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "6"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+text = "1"
+script = ExtResource("1_63hvg")
+scene = "res://resources/levels/1.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="7" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "7"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+text = "1"
+script = ExtResource("1_63hvg")
+scene = "res://resources/levels/1.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
 [node name="8" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-text = "8"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
-
-[node name="9" type="Button" parent="GridContainer"]
-custom_minimum_size = Vector2(60, 60)
-layout_mode = 2
-text = "9"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
-
-[node name="10" type="Button" parent="GridContainer"]
-custom_minimum_size = Vector2(60, 60)
-layout_mode = 2
-text = "10"
-script = ExtResource("1_srrjw")
-metadata/_custom_type_script = "uid://d1n17drxsm2k6"
+text = "1"
+script = ExtResource("1_63hvg")
+scene = "res://resources/levels/1.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"

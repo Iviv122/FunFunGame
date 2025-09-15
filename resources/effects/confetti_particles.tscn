@@ -44,9 +44,11 @@ anim_speed_max = 1.62
 
 [node name="Node2D" type="GPUParticles2D"]
 material = SubResource("CanvasItemMaterial_op0tt")
+emitting = false
 amount = 23
 texture = ExtResource("1_op0tt")
 lifetime = 1.15
+one_shot = true
 explosiveness = 1.0
 randomness = 1.0
 process_material = SubResource("ParticleProcessMaterial_5kp53")

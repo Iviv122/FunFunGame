@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://w6l6fb4dg36k" path="res://objects/gameplay/reset.gd" id="6_g6qfj"]
 [ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="7_0vdul"]
 [ext_resource type="Script" uid="uid://1xn64xlrj0sc" path="res://objects/gameplay/exit.gd" id="8_s4gjp"]
-[ext_resource type="PackedScene" uid="uid://b42lkvj3x32tk" path="res://resources/effects/catch_particles.tscn" id="9_4gpbm"]
+[ext_resource type="PackedScene" uid="uid://b42lkvj3x32tk" path="res://resources/effects/confetti_particles.tscn" id="9_4gpbm"]
 [ext_resource type="Shader" uid="uid://ba2e536dkgj1o" path="res://shaders/portal.gdshader" id="10_ntdvx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6xj6"]
@@ -70,6 +70,7 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 510.0
 offset_bottom = 70.0
+placeholder_text = "x*x"
 
 [node name="Start" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -110,6 +111,7 @@ metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 position = Vector2(-88, -92)
 script = ExtResource("8_s4gjp")
 WinEffect = ExtResource("9_4gpbm")
+NextLevel = "res://resources/levels/3.tscn"
 metadata/_custom_type_script = "uid://1xn64xlrj0sc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
