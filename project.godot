@@ -31,6 +31,7 @@ restart_group=""
 start_group=""
 end_group=""
 music=""
+sfx=""
 
 [rendering]
 

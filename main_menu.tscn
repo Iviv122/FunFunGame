@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2afny00a51rr"]
+[gd_scene load_steps=12 format=3 uid="uid://c2afny00a51rr"]
 
 [ext_resource type="Script" uid="uid://qnqyv6v2in4x" path="res://objects/main_menu/fadeout.gd" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://bldimd5fjmpkc" path="res://objects/main_menu/menus_manager.gd" id="2_fu7sn"]
 [ext_resource type="PackedScene" uid="uid://bjjec76hb1xoj" path="res://resources/menus/main_menu.tscn" id="3_fu7sn"]
 [ext_resource type="Script" uid="uid://bbkxmf8jotla5" path="res://objects/general/music_player.gd" id="4_jix8l"]
+[ext_resource type="Script" uid="uid://bd3de3ty8tpm" path="res://objects/general/efects_player.gd" id="4_qe12f"]
+[ext_resource type="AudioStream" uid="uid://c0pku7sov2fur" path="res://raw_assets/effects/Click.wav" id="5_8qtwp"]
+[ext_resource type="AudioStream" uid="uid://d1wpri4pw7ple" path="res://raw_assets/effects/OnHover.wav" id="5_dy7ct"]
 [ext_resource type="AudioStream" uid="uid://bq1k6dpjou8w6" path="res://raw_assets/music/ChillLofiR.mp3" id="5_glbon"]
 [ext_resource type="AudioStream" uid="uid://cqodlx1qmkot2" path="res://raw_assets/music/lofihiphop.mp3" id="6_nlkkf"]
 
@@ -25,6 +28,18 @@ player = NodePath("AudioStreamPlayer2D")
 metadata/_custom_type_script = "uid://bbkxmf8jotla5"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MusicPlayer"]
+
+[node name="Node" type="Node" parent="." node_paths=PackedStringArray("clickSound", "hoverSound")]
+script = ExtResource("4_qe12f")
+clickSound = NodePath("click")
+hoverSound = NodePath("hover")
+metadata/_custom_type_script = "uid://bd3de3ty8tpm"
+
+[node name="hover" type="AudioStreamPlayer2D" parent="Node"]
+stream = ExtResource("5_dy7ct")
+
+[node name="click" type="AudioStreamPlayer2D" parent="Node"]
+stream = ExtResource("5_8qtwp")
 
 [node name="Manager" type="Node" parent="." node_paths=PackedStringArray("fade") groups=["scene_manager"]]
 physics_interpolation_mode = 2

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c653p1pgx8ia8"]
+[gd_scene load_steps=4 format=3 uid="uid://c653p1pgx8ia8"]
 
 [ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="1_0sh6h"]
 [ext_resource type="Script" uid="uid://n4c3fc66vwup" path="res://objects/settings/volume_slider.gd" id="2_0sh6h"]
+[ext_resource type="Script" uid="uid://bp5xmep7baegp" path="res://objects/settings/sfx_slider.gd" id="3_jtc56"]
 
 [node name="Container" type="VBoxContainer"]
 anchors_preset = 15
@@ -37,3 +38,5 @@ text = "SFX Volume"
 
 [node name="HSlider2" type="HSlider" parent="VBoxContainer"]
 layout_mode = 2
+script = ExtResource("3_jtc56")
+metadata/_custom_type_script = "uid://bp5xmep7baegp"

@@ -1,4 +1,4 @@
-extends Button
+extends ButtonWithSound
 class_name Start 
 
 
