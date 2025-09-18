@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5deudlkxnfn3"]
+
+[ext_resource type="Texture2D" uid="uid://bkwsekpitin8d" path="res://raw_assets/sprites/Confetti.png" id="1_vei8e"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_op0tt"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id="Gradient_op0tt"]
+offsets = PackedFloat32Array(0.57868, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5kp53"]
+gradient = SubResource("Gradient_op0tt")
+
+[sub_resource type="Curve" id="Curve_rase4"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.674157), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_54nvu"]
+curve = SubResource("Curve_rase4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5kp53"]
+particle_flag_disable_z = true
+angle_min = -180.0
+angle_max = 180.0
+direction = Vector3(0, -1, 0)
+flatness = 1.0
+initial_velocity_min = 673.6
+initial_velocity_max = 855.88
+angular_velocity_min = 134.5
+angular_velocity_max = 282.19
+gravity = Vector3(0, 1800, 0)
+scale_min = 0.3
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_54nvu")
+color_ramp = SubResource("GradientTexture1D_5kp53")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+anim_speed_max = 1.62
+
+[node name="Node2D" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_op0tt")
+amount = 23
+texture = ExtResource("1_vei8e")
+lifetime = 1.15
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_5kp53")

@@ -3,6 +3,7 @@ class_name Exit
 
 @export var WinEffect : PackedScene
 @export var NextLevel : String 
+@export var NextLevelNumber : int
 
 func _ready():
 	body_entered.connect(win)
@@ -25,5 +26,9 @@ func win(_a):
 		_a.queue_free()
 		get_tree().call_group("end_group","end")
 		get_tree().call_group("scene_manager","loadMenu",NextLevel)
+
+		LevelProgress.data["level"] = NextLevelNumber
+		LevelProgress._save()
+
 		await get_tree().create_timer(0.1).timeout
 		

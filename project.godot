@@ -15,6 +15,10 @@ run/main_scene="uid://c2afny00a51rr"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LevelProgress="*res://objects/general/level_progress.gd"
+
 [display]
 
 window/size/viewport_width=600

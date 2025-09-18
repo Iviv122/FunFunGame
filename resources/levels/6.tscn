@@ -34,7 +34,7 @@ size = Vector2(150, 150)
 
 [sub_resource type="Gradient" id="Gradient_vj7gb"]
 offsets = PackedFloat32Array(1)
-colors = PackedColorArray(1, 1, 1, 1)
+colors = PackedColorArray(0.478431, 0.478431, 0.478431, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_1r40a"]
 gradient = SubResource("Gradient_vj7gb")
@@ -124,6 +124,7 @@ position = Vector2(-70, 145)
 script = ExtResource("9_byqmk")
 WinEffect = ExtResource("10_8eqjd")
 NextLevel = "res://resources/levels/7.tscn"
+NextLevelNumber = 7
 metadata/_custom_type_script = "uid://1xn64xlrj0sc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]

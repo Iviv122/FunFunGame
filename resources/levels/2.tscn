@@ -112,6 +112,7 @@ position = Vector2(-88, -92)
 script = ExtResource("8_s4gjp")
 WinEffect = ExtResource("9_4gpbm")
 NextLevel = "res://resources/levels/3.tscn"
+NextLevelNumber = 3
 metadata/_custom_type_script = "uid://1xn64xlrj0sc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
