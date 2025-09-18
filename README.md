@@ -1,4 +1,4 @@
-# Go Down! small game about builing math functions
+# FunFun, small game about builing math functions
 demo link https://iviv122.itch.io/funfun
 
 Was made with Godot 4.5 (stable)
