@@ -23,6 +23,13 @@ script = ExtResource("1_sy3tx")
 scene = "res://resources/menus/levels.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
+[node name="Q&A" type="Button" parent="."]
+layout_mode = 2
+text = "Q&A"
+script = ExtResource("1_sy3tx")
+scene = "res://resources/menus/Q&A.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
+
 [node name="Settings" type="Button" parent="."]
 layout_mode = 2
 text = "Settings"

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4jutxl22em4s"]
+
+[ext_resource type="Script" uid="uid://cnvvl2sl68xqf" path="res://objects/main_menu/load_scene.gd" id="1_nwcp8"]
+
+[node name="Container" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 2
+text = "Back"
+script = ExtResource("1_nwcp8")
+scene = "res://resources/menus/main_menu.tscn"
+metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 15
