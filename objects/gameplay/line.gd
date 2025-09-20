@@ -45,7 +45,8 @@ func f(_arg: String) -> void:
 		if _arg.is_empty():
 			return 0
 
-		var eq = _arg.replace("x", str(x))
+		var eq = _arg.replace("^","**")
+		eq = eq.replace("x", "("+str(x)+")")
 
 		ex.parse(eq)
 

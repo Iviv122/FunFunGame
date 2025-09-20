@@ -29,7 +29,6 @@ text = "[b]> Q: mx+c doesn't give straight line.[/b]
 
 [i]> A: Sadly eval function in godot doesn't support mx. It should be written as m*x otherwise it will be interpreted as[/i]
 
-[quote]
 let assume m = 5
 
 then for x = 10 => mx = 510
@@ -37,7 +36,6 @@ then for x = 10 => mx = 510
 then for x = -5 => 5-10 
 
 then for x = 150 => 5150
-[/quote]
 
 [b]> Q: why i can't write y = x?[/b]
 
@@ -46,10 +44,6 @@ then for x = 150 => 5150
 [b]> Q: Why my function is so small?[/b]
 
 [i]> A: If it is too small for you, try multiplication or division[/i]
-
-[b]> Q: Where is my ^?[/b]
-
-[i]> A: Godot's parser uses ** instead [/i]
 
 "
 

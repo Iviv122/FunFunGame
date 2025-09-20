@@ -7,7 +7,6 @@ Was made with Godot 4.5 (stable)
 
 - Mouse to navigate 
 - Keyboard to input function into input field
-- If you want to use power, write ** instead of ^
 - If your function doen't work 
 
 ## My function doesn't work
@@ -32,10 +31,6 @@ Please check reasons below if it is not the case report please
 > Q: Why my function is so small? 
 >
 > A: If it is too small for you, try multiplication or division
-
-> Q: Where is my ^?
->
-> A: Godot's parser use ** instead
 
 ## Dependecies
 - No Dependecies 
