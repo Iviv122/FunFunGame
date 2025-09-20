@@ -21,6 +21,37 @@ script = ExtResource("1_nwcp8")
 scene = "res://resources/menus/main_menu.tscn"
 metadata/_custom_type_script = "uid://cnvvl2sl68xqf"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
-theme_override_constants/separation = 15
+bbcode_enabled = true
+text = "[b]> Q: mx+c doesn't give straight line.[/b]
+
+[i]> A: Sadly eval function in godot doesn't support mx. It should be written as m*x otherwise it will be interpreted as[/i]
+
+[quote]
+let assume m = 5
+
+then for x = 10 => mx = 510
+
+then for x = -5 => 5-10 
+
+then for x = 150 => 5150
+[/quote]
+
+[b]> Q: why i can't write y = x?[/b]
+
+[i]> A: Parser assumes that 'y=' part is always here, it is redundant so just write x[/i]
+
+[b]> Q: Why my function is so small?[/b]
+
+[i]> A: If it is too small for you, try multiplication or division[/i]
+
+[b]> Q: Where is my ^?[/b]
+
+[i]> A: Godot's parser uses ** instead [/i]
+
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
